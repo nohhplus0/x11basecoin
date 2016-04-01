@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=X11BaseCoin
+Comment=X11BaseCoin P2P Cryptocurrency
+Comment[fr]=X11BaseCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=X11BaseCoin, eşten eşe kriptografik sanal para birimi
+Exec=x11basecoin-qt %u
+Terminal=false
+Type=Application
+Icon=x11basecoin128
+MimeType=x-scheme-handler/x11basecoin;
+Categories=Office;Finance;

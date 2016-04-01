@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/x11basecoin_bg.qm</file>
+        <file alias="de">locale/x11basecoin_de.qm</file>
+        <file alias="en">locale/x11basecoin_en.qm</file>
+        <file alias="es">locale/x11basecoin_es.qm</file>
+        <file alias="fi">locale/x11basecoin_fi.qm</file>
+        <file alias="fr">locale/x11basecoin_fr.qm</file>
+        <file alias="it">locale/x11basecoin_it.qm</file>
+        <file alias="ja">locale/x11basecoin_ja.qm</file>
+        <file alias="pl">locale/x11basecoin_pl.qm</file>
+        <file alias="pt">locale/x11basecoin_pt.qm</file>
+        <file alias="ru">locale/x11basecoin_ru.qm</file>
+        <file alias="sk">locale/x11basecoin_sk.qm</file>
+        <file alias="sv">locale/x11basecoin_sv.qm</file>
+        <file alias="vi">locale/x11basecoin_vi.qm</file>
+        <file alias="zh_CN">locale/x11basecoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/x11basecoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

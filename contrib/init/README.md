@@ -1,9 +1,9 @@
 Sample configuration files for:
 
-SystemD: dashd.service
-Upstart: dashd.conf
-OpenRC:  dashd.openrc
-         dashd.openrcconf
+SystemD: x11basecoind.service
+Upstart: x11basecoind.conf
+OpenRC:  x11basecoind.openrc
+         x11basecoind.openrcconf
 
 have been made available to assist packagers in creating node packages here.
 

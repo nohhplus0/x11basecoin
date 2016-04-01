@@ -97,7 +97,7 @@ Thanks to everybody who contributed to this release:
 
 Gavin Andresen
 Jeff Garzik
-Luke Dashjr
+Luke X11BaseCoinjr
 Mark Friedenbach
 Matt Corallo
 Philip Kaufmann

@@ -1,0 +1,11 @@
+[Protocol]
+exec=x11basecoin-qt '%u'
+protocol=x11basecoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

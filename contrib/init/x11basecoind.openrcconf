@@ -1,0 +1,27 @@
+# /etc/conf.d/x11basecoind: config file for /etc/init.d/x11basecoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/x11basecoin/x11basecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/x11basecoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/x11basecoind.pid"
+
+# Where to write x11basecoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/x11basecoind"
+
+# User and group to own x11basecoind process
+#BITCOIND_USER="x11basecoin"
+#BITCOIND_GROUP="x11basecoin"
+
+# Path to x11basecoind executable
+#BITCOIND_BIN="/usr/bin/x11basecoind"
+
+# Nice value to run x11basecoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+

@@ -1,0 +1,22 @@
+[Unit]
+Description=X11BaseCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=x11basecoin
+Group=x11basecoin
+
+Type=forking
+PIDFile=/var/lib/x11basecoind/x11basecoind.pid
+ExecStart=/usr/bin/x11basecoind -daemon -pid=/var/lib/x11basecoind/x11basecoind.pid \
+-conf=/etc/x11basecoin/x11basecoin.conf -datadir=/var/lib/x11basecoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

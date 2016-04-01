@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
+// Copyright (c) 2014-2015 The X11BaseCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,10 +19,10 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(DASH);
-    unitlist.append(mDASH);
-    unitlist.append(uDASH);
-    unitlist.append(duffs);
+    unitlist.append(X11BASECOIN);
+    unitlist.append(mX11BASECOIN);
+    unitlist.append(uX11BASECOIN);
+    unitlist.append(x11basecoinbits);
     return unitlist;
 }
 
@@ -30,10 +30,10 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case DASH:
-    case mDASH:
-    case uDASH:
-    case duffs:
+    case X11BASECOIN:
+    case mX11BASECOIN:
+    case uX11BASECOIN:
+    case x11basecoinbits:
         return true;
     default:
         return false;
@@ -44,10 +44,10 @@ QString BitcoinUnits::id(int unit)
 {
     switch(unit)
     {
-        case DASH: return QString("dash");
-        case mDASH: return QString("mdash");
-        case uDASH: return QString::fromUtf8("udash");
-        case duffs: return QString("duffs");
+        case X11BASECOIN: return QString("xbc");
+        case mX11BASECOIN: return QString("mxbc");
+        case uX11BASECOIN: return QString::fromUtf8("uxbc");
+        case x11basecoinbits: return QString("xbits");
         default: return QString("???");
     }
 }
@@ -58,10 +58,10 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("DASH");
-            case mDASH: return QString("mDASH");
-            case uDASH: return QString::fromUtf8("μDASH");
-            case duffs: return QString("duffs");
+            case X11BASECOIN: return QString("XBC");
+            case mX11BASECOIN: return QString("mXBC");
+            case uX11BASECOIN: return QString::fromUtf8("μXBC");
+            case x11basecoinbits: return QString("xbits");
             default: return QString("???");
         }
     }
@@ -69,10 +69,10 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("tDASH");
-            case mDASH: return QString("mtDASH");
-            case uDASH: return QString::fromUtf8("μtDASH");
-            case duffs: return QString("tduffs");
+            case X11BASECOIN: return QString("tXBC");
+            case mX11BASECOIN: return QString("mtXBC");
+            case uX11BASECOIN: return QString::fromUtf8("μtXBC");
+            case x11basecoinbits: return QString("txbits");
             default: return QString("???");
         }
     }
@@ -84,10 +84,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("Dash");
-            case mDASH: return QString("Milli-Dash (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-Dash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-Dash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case X11BASECOIN: return QString("X11BaseCoin");
+            case mX11BASECOIN: return QString("Milli-X11BaseCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uX11BASECOIN: return QString("Micro-X11BaseCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case x11basecoinbits: return QString("Ten Nano-X11BaseCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -95,10 +95,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("TestDashs");
-            case mDASH: return QString("Milli-TestDash (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-TestDash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestDash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case X11BASECOIN: return QString("TestX11BaseCoins");
+            case mX11BASECOIN: return QString("Milli-TestX11BaseCoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uX11BASECOIN: return QString("Micro-TestX11BaseCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case x11basecoinbits: return QString("Ten Nano-TestX11BaseCoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -108,10 +108,10 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case DASH:  return 100000000;
-    case mDASH: return 100000;
-    case uDASH: return 100;
-    case duffs: return 1;
+    case X11BASECOIN:  return 100000000;
+    case mX11BASECOIN: return 100000;
+    case uX11BASECOIN: return 100;
+    case x11basecoinbits: return 1;
     default:   return 100000000;
     }
 }
@@ -120,10 +120,10 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case DASH: return 8;
-    case mDASH: return 5;
-    case uDASH: return 2;
-    case duffs: return 0;
+    case X11BASECOIN: return 8;
+    case mX11BASECOIN: return 5;
+    case uX11BASECOIN: return 2;
+    case x11basecoinbits: return 0;
     default: return 0;
     }
 }

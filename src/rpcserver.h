@@ -93,7 +93,7 @@ public:
 };
 
 /**
- * Dash RPC command dispatcher.
+ * X11BaseCoin RPC command dispatcher.
  */
 class CRPCTable
 {
